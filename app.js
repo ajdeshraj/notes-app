@@ -1,7 +1,7 @@
-const validator = require('validator')
+chalk = require('chalk')
 getNotes = require('./notes.js')
 
 const str = getNotes()
 console.log(str)
 
-console.log(validator.isURL('https:/mail.com'))
+console.log(chalk.bgGreen.bold('Success!'))
