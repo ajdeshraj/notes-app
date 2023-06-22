@@ -24,9 +24,10 @@ const addNote = (title, body) => {
     const notes = loadNotes()
 
     // Checking for duplicate titles
-    const duplicateNotes = notes.filter((note) => note.title === title)
+    // const duplicateNotes = notes.filter((note) => note.title === title)
+    const duplicateNote = notes.find((note) => note.title === title)    // find stops after single match
 
-    if (duplicateNotes.length == 0) {
+    if (!duplicateNote) {   // if (duplicateNote === undefined)
         notes.push({
             title: title,
             body: body
