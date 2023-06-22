@@ -32,7 +32,7 @@ const addNote = (title, body) => {
             body: body
         })
         saveNotes(notes)
-        console.log(chalk.green.inverse('New Note Added!'))
+        console.log(chalk.green('New Note Added!'))
     }
     else {
         console.log(chalk.red.inverse('Note Title Already Exists!'))
@@ -47,7 +47,7 @@ const removeNote = (title) => {
 
     if (reqdNotes.length < notes.length) {
         saveNotes(reqdNotes)
-        console.log(chalk.green.inverse('Note Removed!'))
+        console.log(chalk.green('Note Removed!'))
     }
     else {
         console.log(chalk.red.inverse('No Such Note Exists!'))
