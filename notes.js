@@ -63,9 +63,24 @@ const listNotes = () => {
     })
 }
 
+const readNote = (title) => {
+    const notes = loadNotes()
+
+    reqdNote = notes.find((note) => note.title === title)
+
+    if (reqdNote) {
+        console.log(chalk.inverse(reqdNote.title))
+        console.log(reqdNote.body)
+    }
+    else {
+        console.log(chalk.red.inverse('Note Not Found!'))
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNote: readNote
 }
