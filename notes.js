@@ -1,7 +1,5 @@
 const fs = require('fs')
 
-const getNotes = () => "Your notes... "
-
 const loadNotes = () => {
     try
     {
