@@ -25,6 +25,9 @@ const addNote = (title, body) => {
     // const duplicateNotes = notes.filter((note) => note.title === title)
     const duplicateNote = notes.find((note) => note.title === title)    // find stops after single match
 
+    // Using debugger
+    // debugger
+
     if (!duplicateNote) {   // if (duplicateNote === undefined)
         notes.push({
             title: title,
@@ -76,7 +79,6 @@ const readNote = (title) => {
 }
 
 module.exports = {
-    getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
     listNotes: listNotes,
